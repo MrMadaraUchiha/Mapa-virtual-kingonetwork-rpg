@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa Virtual</title>
+    <style>
+        #map {
+            width: 640px;
+            height: 642px;
+            position: relative;
+            background: url('mapa.png') no-repeat;
+        }
+
+        .marker {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            background: url('Content_Dungeon.png') no-repeat;
+            cursor: pointer;
+        }
+
+        #server-icon {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 64px;
+            height: 64px;
+            background: url('NPC_ItemIdentifier.png') no-repeat;
+            cursor: pointer;
+        }
+
+        #server-icon span {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <div id="server-icon">
+            <span>jogar.rpg-kingonetwork.com</span>
+        </div>
+        <div id="marker1" class="marker" style="top: 310px; left: 310px;"></div>
+        <div id="marker2" class="marker" style="top: 300px; left: 400px;"></div>
+        <!-- Adicione mais marcadores conforme necessário -->
+    </div>
+
+    <script>
+        // Adicione aqui o código JavaScript para tornar os marcadores interativos
+
+        // Exemplo básico de como adicionar um evento de clique a um marcador
+        var marker1 = document.getElementById('marker1');
+        marker1.addEventListener('click', function() {
+            // Ação a ser executada quando o marcador 1 for clicado
+            // Por exemplo, redirecionar para uma página específica do jogo
+            window.location.href = 'pagina-do-jogo1.html';
+        });
+
+        // Adicione eventos de clique para outros marcadores
+
+        // Exemplo de redirecionamento ao clicar no ícone do servidor
+        var serverIcon = document.getElementById('server-icon');
+        serverIcon.addEventListener('click', function() {
+            // Redirecionar para o IP do servidor
+            window.location.href = 'minecraft://seu-ip-aqui';
+        });
+
+    </script>
+</body>
+</html>
